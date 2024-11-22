@@ -2,7 +2,15 @@ import { createGlobalStyle } from "styled-components";
 import theme from "./theme";
 
 export const GlobalStyles = createGlobalStyle`
-  /* Reset styles */
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Rest of your existing styles remain the same */
   *,
   *::before,
   *::after {
@@ -11,13 +19,11 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
-  /* Global focus styles */
   :focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px ${theme.colors.primary}40;
+    box-shadow: 0 0 0 2px ${theme.colors.background.muted};
   }
 
-  /* Form element base styles */
   input,
   textarea,
   select,
@@ -30,7 +36,6 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  /* Interactive element base styles */
   button,
   input,
   select,
@@ -40,7 +45,6 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  /* Accessibility styles */
   .visually-hidden {
     position: absolute;
     width: 1px;

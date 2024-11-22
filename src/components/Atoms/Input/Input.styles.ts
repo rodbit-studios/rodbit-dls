@@ -1,6 +1,6 @@
 import styled, { css, FlattenSimpleInterpolation } from "styled-components";
 import { semanticTokens } from "../../../styles/theme/semantic.ts";
-import { colorTokens } from "../../../styles/theme/tokens.ts";
+import { colorTokens, spacingTokens } from "../../../styles/theme/tokens.ts";
 import { focusStyles, inputBaseStyles } from "../../../styles/mixins.ts";
 
 interface InputProps {
@@ -11,29 +11,26 @@ export type InputStyles = FlattenSimpleInterpolation;
 
 export const StyledInput = styled.input<InputProps>`
   ${inputBaseStyles}
-  padding: ${colorTokens.spacing.small};
-  font-size: ${colorTokens.fontSizes.medium};
+  padding: ${spacingTokens.spacing.small};
+  font-size: ${spacingTokens.spacing.medium};
   font-weight: 600;
 
   ${({ variant }) =>
     variant === "default"
       ? css`
-          color: ${semanticTokens.button.primary.text};
-          border: 1px solid ${semanticTokens.button.primary.background};
+          border: 1px solid ${colorTokens.core.blue.primary};
+          border-radius: ${spacingTokens.borderRadius.medium};
           &:hover {
-            border: 1px solid ${semanticTokens.button.primary.hover};
+            border: 1px solid ${colorTokens.core.blue.dark};
           }
-          ${focusStyles}
         `
       : css`
-          color: ${semanticTokens.button.primary.text};
+          color: ${semanticTokens.text.primary};
           background-color: ${semanticTokens.button.primary.background};
+          border-radius: ${spacingTokens.borderRadius.medium};
+          border: 1px solid ${colorTokens.core.blue.primary};
           &:hover {
-            background-color: ${semanticTokens.button.primary.hover};
-          }
-          &:focus-visible {
-            background-color: ${semanticTokens.button.primary.background};
-            border-color: ${semanticTokens.state.error.background};
+            border: 1px solid ${colorTokens.core.blue.dark};
           }
         `}
 `;

@@ -6,7 +6,7 @@ const meta: Meta<typeof Button> = {
   component: Button,
   argTypes: {
     variant: {
-      options: ["primary", "secondary", "text"],
+      options: ["filled", "outline", "text"],
       control: { type: "radio" },
     },
     size: {
@@ -19,16 +19,16 @@ const meta: Meta<typeof Button> = {
 
 export default meta;
 
-export const Primary: StoryObj<typeof Button> = {
+export const Filled: StoryObj<typeof Button> = {
   args: {
-    variant: "primary",
+    variant: "filled",
     children: "Primary Button",
   },
 };
 
-export const Secondary: StoryObj<typeof Button> = {
+export const Outline: StoryObj<typeof Button> = {
   args: {
-    variant: "secondary",
+    variant: "outline",
     children: "Secondary Button",
   },
 };

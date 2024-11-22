@@ -1,5 +1,5 @@
 import styled, { FlattenSimpleInterpolation } from "styled-components";
-import { colorTokens } from "../../../styles/theme/tokens";
+import { colorTokens, spacingTokens } from "../../../styles/theme/tokens";
 import { semanticTokens } from "../../../styles/theme/semantic";
 
 interface CheckboxProps {
@@ -9,8 +9,8 @@ interface CheckboxProps {
 export type CheckboxStyles = FlattenSimpleInterpolation;
 
 export const StyledCheckbox = styled.input.attrs({ type: "checkbox" }) <CheckboxProps>`
-  width: ${colorTokens.fontSizes.medium};
-  height: ${colorTokens.fontSizes.medium};
+  width: ${spacingTokens.spacing.medium};
+  height: ${spacingTokens.spacing.medium};
   border: 1px solid ${colorTokens.core.gray[500]};
   cursor: pointer;
 
@@ -32,5 +32,5 @@ export const StyledCheckbox = styled.input.attrs({ type: "checkbox" }) <Checkbox
 export const CheckboxLabel = styled.label`
   display: inline-flex;
   align-items: center;
-  gap: ${colorTokens.spacing.small};
+  gap: ${spacingTokens.spacing.small};
 `;

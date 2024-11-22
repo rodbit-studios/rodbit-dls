@@ -21,6 +21,9 @@ export const colorTokens = {
       900: "#1e1e1e",
     },
   },
+} as const;
+
+export const spacingTokens = {
   spacing: {
     small: "8px",
     medium: "16px",
@@ -36,4 +39,15 @@ export const colorTokens = {
     medium: "16px",
     large: "20px",
   },
+} as const;
+
+export const fontFamilyTokens = {
+  fontFamilies: {
+    body: "Roboto, sans-serif",
+    heading: "Montserrat, sans-serif",
+  },
+} as const;
+
+export const typographyTokens = {
+  fontFamilyTokens,
 } as const;

@@ -18,8 +18,6 @@ export default meta;
 export const Default: StoryObj<typeof Radio> = {
   args: {
     label: "Option A",
-    checked: false,
-    disabled: false,
   },
 };
 

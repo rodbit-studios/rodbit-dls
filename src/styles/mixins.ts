@@ -3,7 +3,7 @@ import theme from "./theme";
 
 export const focusStyles = css`
   &:focus-visible {
-    box-shadow: 0 0 0 2px ${theme.colors.primary}40;
+    box-shadow: 0 0 0 2px ${theme.colors.gray[500]};
   }
 `;
 

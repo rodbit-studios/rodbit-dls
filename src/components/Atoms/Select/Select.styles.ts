@@ -1,16 +1,15 @@
 import styled, { FlattenSimpleInterpolation } from "styled-components";
-import { colorTokens } from "../../../styles/theme/tokens";
+import { colorTokens, spacingTokens } from "../../../styles/theme/tokens";
 import { semanticTokens } from "../../../styles/theme/semantic";
 
 
 export type SelectStyles = FlattenSimpleInterpolation;
 
 export const StyledSelect = styled.select`
-  background-color: ${semanticTokens.background.contrast};
-  border: 1px solid ${colorTokens.core.gray[500]};
-  border-radius: ${colorTokens.borderRadius.small};
-  font-size: ${colorTokens.fontSizes.medium};
-  padding: ${colorTokens.spacing.small};
+  border: 1px solid ${colorTokens.core.blue.primary};
+  border-radius: ${spacingTokens.borderRadius.medium};
+  font-size: ${spacingTokens.fontSizes.medium};
+  padding: ${spacingTokens.spacing.small};
   cursor: pointer;
 
   &:focus {
@@ -31,7 +30,7 @@ export const SelectOption = styled.option`
 
 export const SelectLabel = styled.label`
   display: block;
-  font-size: ${colorTokens.fontSizes.medium};
+  font-size: ${spacingTokens.fontSizes.medium};
   font-weight: 600;
-  margin-bottom: ${colorTokens.spacing.small};
+  margin-bottom: ${spacingTokens.spacing.small};
 `;;

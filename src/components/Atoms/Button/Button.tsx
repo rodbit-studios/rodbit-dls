@@ -2,14 +2,14 @@ import React from "react";
 import { StyledButton } from "./Button.styles";
 
 interface ButtonProps {
-  variant?: "primary" | "secondary" | "text";
+  variant?: "filled" | "outline" | "text";
   size?: "small" | "medium" | "large";
   children: React.ReactNode;
   onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
-  variant = "primary",
+  variant = "filled",
   size = "medium",
   children,
   onClick,

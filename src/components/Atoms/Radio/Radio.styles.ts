@@ -1,5 +1,5 @@
 import styled, { FlattenSimpleInterpolation } from "styled-components";
-import { colorTokens } from "../../../styles/theme/tokens";
+import { colorTokens, fontFamilyTokens, spacingTokens } from "../../../styles/theme/tokens";
 import { semanticTokens } from "../../../styles/theme/semantic";
 
 interface RadioProps {
@@ -9,12 +9,10 @@ interface RadioProps {
 export type RadioStyles = FlattenSimpleInterpolation;
 
 export const StyledRadio = styled.input.attrs({ type: "radio" }) <RadioProps>`
-  appearance: none;
-  width: ${colorTokens.fontSizes.medium};
-  height: ${colorTokens.fontSizes.medium};
-  border-radius: ${colorTokens.borderRadius.medium};
+  width: ${spacingTokens.spacing.medium};
+  height: ${spacingTokens.spacing.medium};
+  border-radius: ${spacingTokens.borderRadius.medium};
   border: 1px solid ${colorTokens.core.gray[500]};
-  outline: none;
   cursor: pointer;
 
   &:checked {
@@ -35,8 +33,7 @@ export const StyledRadio = styled.input.attrs({ type: "radio" }) <RadioProps>`
 export const RadioLabel = styled.label`
   display: inline-flex;
   align-items: center;
-  gap: ${colorTokens.spacing.small};
+  gap: ${spacingTokens.spacing.medium};
   cursor: pointer;
-  font-size: ${colorTokens.fontSizes.medium};
-  color: ${semanticTokens.text.primary};
+  font-size: ${spacingTokens.fontSizes.medium};
 `;

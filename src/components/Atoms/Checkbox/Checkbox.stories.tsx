@@ -23,7 +23,7 @@ export const Default: StoryObj<typeof Checkbox> = {
 
 export const Checked: StoryObj<typeof Checkbox> = {
   args: {
-    label: "Option B",
+    label: "Checked",
     checked: true,
     disabled: false,
   },
@@ -31,7 +31,7 @@ export const Checked: StoryObj<typeof Checkbox> = {
 
 export const Disabled: StoryObj<typeof Checkbox> = {
   args: {
-    label: "Option C",
+    label: "Disabled",
     checked: false,
     disabled: true,
   },

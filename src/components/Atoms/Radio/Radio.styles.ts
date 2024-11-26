@@ -33,7 +33,8 @@ export const StyledRadio = styled.input.attrs({ type: "radio" }) <RadioProps>`
 export const RadioLabel = styled.label`
   display: inline-flex;
   align-items: center;
-  gap: ${spacingTokens.spacing.medium};
   cursor: pointer;
+  gap: ${spacingTokens.spacing.medium};
   font-size: ${spacingTokens.fontSizes.medium};
+  font-family: ${fontFamilyTokens.fontFamilies.body};
 `;

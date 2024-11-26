@@ -22,20 +22,20 @@ export default meta;
 export const Filled: StoryObj<typeof Button> = {
   args: {
     variant: "filled",
-    children: "Primary Button",
+    children: "Button",
   },
 };
 
 export const Outline: StoryObj<typeof Button> = {
   args: {
     variant: "outline",
-    children: "Secondary Button",
+    children: "Button",
   },
 };
 
 export const Text: StoryObj<typeof Button> = {
   args: {
     variant: "text",
-    children: "Text Button",
+    children: "Button",
   },
 };

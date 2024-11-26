@@ -1,7 +1,7 @@
 import styled, { css, FlattenSimpleInterpolation } from "styled-components";
 import { semanticTokens } from "../../../styles/theme/semantic.ts";
 import { colorTokens, spacingTokens } from "../../../styles/theme/tokens.ts";
-import { focusStyles, inputBaseStyles } from "../../../styles/mixins.ts";
+import { disabledStyles, focusStyles, fontFamilyStyles, hoverStyles, inputBaseStyles } from "../../../styles/mixins.ts";
 
 interface InputProps {
   variant?: "default" | "filled";
@@ -32,5 +32,9 @@ export const StyledInput = styled.input<InputProps>`
           &:hover {
             border: 1px solid ${colorTokens.core.blue.dark};
           }
+
         `}
+  ${focusStyles}
+  ${hoverStyles}
+  ${fontFamilyStyles}
 `;

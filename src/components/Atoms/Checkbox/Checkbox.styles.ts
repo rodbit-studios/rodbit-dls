@@ -1,36 +1,42 @@
 import styled, { FlattenSimpleInterpolation } from "styled-components";
 import { colorTokens, spacingTokens } from "../../../styles/theme/tokens";
-import { semanticTokens } from "../../../styles/theme/semantic";
+import { disabledStyles, fontFamilyStyles, hoverStyles } from "../../../styles/mixins";
 
-interface CheckboxProps {
+interface CheckboxProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
   checked?: boolean;
+  disabled?: boolean;
 }
 
 export type CheckboxStyles = FlattenSimpleInterpolation;
 
 export const StyledCheckbox = styled.input.attrs({ type: "checkbox" }) <CheckboxProps>`
+  appearance: none;
+  cursor: pointer;
   width: ${spacingTokens.spacing.medium};
   height: ${spacingTokens.spacing.medium};
-  border: 1px solid ${colorTokens.core.gray[500]};
-  cursor: pointer;
-
+  border: 1px solid ${colorTokens.core.gray[900]};
+  border-radius: 4px;
+  background-color: ${colorTokens.core.gray[100]};
+  
   &:checked {
-    border-color: ${semanticTokens.state.success.text};
-    background-color: ${semanticTokens.state.success.background};
+    border-color: ${colorTokens.core.blue.primary};
+    background-color: ${colorTokens.core.blue.primary};
+    color: ${colorTokens.core.gray[100]};
   }
-
-  &:focus-visible {
-    box-shadow: 0 0 0 2px ${semanticTokens.button.primary.text};
-  }
-
   &:disabled {
-    opacity: 0.5;
+    ${disabledStyles}
     cursor: not-allowed;
   }
+  ${hoverStyles}
 `;
 
-export const CheckboxLabel = styled.label`
+export const CheckboxLabel = styled.label<CheckboxProps>`
   display: inline-flex;
   align-items: center;
   gap: ${spacingTokens.spacing.small};
+
+  //TODO
+  // FIX LABEL NOT APPLING STYLES FOR DISABLED
+  ${fontFamilyStyles}
+  
 `;

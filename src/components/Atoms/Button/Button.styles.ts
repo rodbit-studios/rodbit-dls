@@ -12,7 +12,7 @@ interface ButtonProps {
 export type ButtonStyles = FlattenSimpleInterpolation;
 
 export const StyledButton = styled.button<ButtonProps>`
-  padding: ${({ size }) =>
+  padding: 0.5rem ${({ size }) =>
     size === "small"
       ? spacingTokens.spacing.small
       : size === "medium"
@@ -24,7 +24,7 @@ export const StyledButton = styled.button<ButtonProps>`
       : size === "medium"
         ? spacingTokens.fontSizes.medium
         : spacingTokens.fontSizes.large};
-  border-radius: ${spacingTokens.borderRadius.small};
+  border-radius: ${spacingTokens.borderRadius.xLarge};
   cursor: pointer;
   transition: all 0.2s ease-in-out;
           border: none;
@@ -41,11 +41,14 @@ export const StyledButton = styled.button<ButtonProps>`
         `
       : variant === "outline"
         ? css`
-            background-color: ${colorTokens.core.blue.muted};
-            color: ${semanticTokens.text.primary};
+            background-color: transparent;
+            color: ${colorTokens.core.blue.primary};
+            border: 1px solid ${colorTokens.core.blue.primary};
 
             &:hover {
               background-color: ${colorTokens.core.blue.dark};
+              color: ${colorTokens.core.gray[100]};
+              border: 1px solid ${colorTokens.core.blue.dark};
             }
           `
         : css`

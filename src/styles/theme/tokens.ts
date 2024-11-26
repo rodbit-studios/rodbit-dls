@@ -33,6 +33,7 @@ export const spacingTokens = {
     small: "4px",
     medium: "8px",
     large: "12px",
+    xLarge: "24px"
   },
   fontSizes: {
     small: "12px",
@@ -48,6 +49,3 @@ export const fontFamilyTokens = {
   },
 } as const;
 
-export const typographyTokens = {
-  fontFamilyTokens,
-} as const;

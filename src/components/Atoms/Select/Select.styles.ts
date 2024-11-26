@@ -1,6 +1,7 @@
 import styled, { FlattenSimpleInterpolation } from "styled-components";
 import { colorTokens, spacingTokens } from "../../../styles/theme/tokens";
 import { semanticTokens } from "../../../styles/theme/semantic";
+import { fontFamilyStyles, hoverStyles, inputBaseStyles } from "../../../styles/mixins";
 
 
 export type SelectStyles = FlattenSimpleInterpolation;
@@ -11,16 +12,6 @@ export const StyledSelect = styled.select`
   font-size: ${spacingTokens.fontSizes.medium};
   padding: ${spacingTokens.spacing.small};
   cursor: pointer;
-
-  &:focus {
-    outline: none;
-    border-color: ${semanticTokens.button.primary.background};
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
 `;
 
 export const SelectOption = styled.option`
@@ -31,6 +22,6 @@ export const SelectOption = styled.option`
 export const SelectLabel = styled.label`
   display: block;
   font-size: ${spacingTokens.fontSizes.medium};
-  font-weight: 600;
   margin-bottom: ${spacingTokens.spacing.small};
-`;;
+  ${fontFamilyStyles}
+`;

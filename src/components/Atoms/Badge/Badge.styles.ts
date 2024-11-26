@@ -1,22 +1,17 @@
 import styled, { css, FlattenSimpleInterpolation } from "styled-components";
 import { colorTokens, spacingTokens } from "../../../styles/theme/tokens";
 import { semanticTokens } from "../../../styles/theme/semantic";
-
+import { fontFamilyStyles } from "../../../styles/mixins";
 
 export type BadgeStyles = FlattenSimpleInterpolation;
 
 export const StyledBadge = styled.label<BadgeStyles>`
-  background-color: ${semanticTokens.background.contrast};
+  background-color: ${colorTokens.core.blue.primary};
   border: 1px solid ${colorTokens.core.gray[500]};
-  border-radius: ${spacingTokens.spacing.small};
+  border-radius: ${spacingTokens.borderRadius.medium};
   font-size: ${spacingTokens.fontSizes.small};
   padding: ${spacingTokens.spacing.small};
   text-transform: uppercase;
-
-  &:focus {
-    outline: none;
-    border-color: ${semanticTokens.button.primary.background};
-  }
 
   &:disabled {
     opacity: 0.5;
@@ -31,9 +26,10 @@ export const StyledBadge = styled.label<BadgeStyles>`
           border: none;
         `
       : css`
-          background-color: none;
-          color: ${semanticTokens.text.inverse};
-          border: 1px solid ${semanticTokens.border.contrast};
+          background-color: transparent;
+          color: ${colorTokens.core.blue.primary};
+          border: 1px solid ${colorTokens.core.blue.primary};
         `}
+  ${fontFamilyStyles}
 `;
 

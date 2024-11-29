@@ -13,7 +13,6 @@ export const StyledInput = styled.input<InputProps>`
   ${inputBaseStyles}
   padding: ${spacingTokens.spacing.small};
   font-size: ${spacingTokens.spacing.medium};
-  font-weight: 600;
 
   ${({ variant }) =>
     variant === "default"
@@ -23,6 +22,7 @@ export const StyledInput = styled.input<InputProps>`
           &:hover {
             border: 1px solid ${colorTokens.core.blue.dark};
           }
+          margin-top: ${spacingTokens.spacing.small};
         `
       : css`
           color: ${semanticTokens.text.primary};
@@ -32,9 +32,17 @@ export const StyledInput = styled.input<InputProps>`
           &:hover {
             border: 1px solid ${colorTokens.core.blue.dark};
           }
-
+          margin-top: ${spacingTokens.spacing.small};
         `}
   ${focusStyles}
   ${hoverStyles}
+  ${fontFamilyStyles}
+`;
+
+export const InputLabel = styled.label<InputProps>`
+  display: flex;
+  flex-direction: column;
+  color: ${colorTokens.core.gray[900]};
+  font-size: ${spacingTokens.spacing.medium};
   ${fontFamilyStyles}
 `;

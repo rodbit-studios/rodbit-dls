@@ -7,7 +7,9 @@ const meta: Meta<typeof Select> = {
   argTypes: {
     label: { control: "text" },
     options: {
-      control: { type: "array" },
+      control: {
+        type: "object",
+      },
     },
     value: { control: "text" },
     onChange: { action: "onChange" },
@@ -26,7 +28,6 @@ export const Default: StoryObj<typeof Select> = {
       { label: "Option 2", value: "option2" },
       { label: "Option 3", value: "option3" },
     ],
-    value: "option2",
   },
 };
 
@@ -38,7 +39,6 @@ export const Disabled: StoryObj<typeof Select> = {
       { label: "Option 2", value: "option2" },
       { label: "Option 3", value: "option3" },
     ],
-    value: "option1",
     disabled: true,
   },
 };

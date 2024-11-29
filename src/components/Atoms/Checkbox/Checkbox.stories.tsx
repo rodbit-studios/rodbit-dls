@@ -32,7 +32,6 @@ export const Checked: StoryObj<typeof Checkbox> = {
 export const Disabled: StoryObj<typeof Checkbox> = {
   args: {
     label: "Disabled",
-    checked: false,
     disabled: true,
   },
 };

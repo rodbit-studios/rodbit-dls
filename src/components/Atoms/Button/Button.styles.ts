@@ -1,7 +1,6 @@
 import styled, { css, FlattenSimpleInterpolation } from "styled-components";
 import { theme } from "../../../styles/theme/index.ts";
 import { colorTokens, spacingTokens } from "../../../styles/theme/tokens";
-import { semanticTokens } from "../../../styles/theme/semantic";
 
 interface ButtonProps {
   variant?: "filled" | "outline" | "text";
@@ -33,10 +32,10 @@ export const StyledButton = styled.button<ButtonProps>`
     variant === "filled"
       ? css`
           background-color: ${colorTokens.core.blue.primary};
-          color: ${semanticTokens.text.primary};
+          color: ${colorTokens.core.gray[100]};
 
           &:hover {
-            background-color: ${semanticTokens.button.primary.hover};
+            background-color: ${colorTokens.core.blue.dark};
           }
         `
       : variant === "outline"
@@ -53,10 +52,10 @@ export const StyledButton = styled.button<ButtonProps>`
           `
         : css`
             background-color: transparent;
-            color: ${theme.colors.blue.primary};
+            color: ${colorTokens.core.blue.primary};
 
             &:hover {
-              color: ${theme.colors.blue.dark};
+              color: ${colorTokens.core.blue.dark};
             }
           `}
 `;

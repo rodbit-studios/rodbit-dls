@@ -1,8 +1,6 @@
 import styled, { FlattenSimpleInterpolation } from "styled-components";
 import { colorTokens, spacingTokens } from "../../../styles/theme/tokens";
-import { semanticTokens } from "../../../styles/theme/semantic";
-import { fontFamilyStyles, hoverStyles, inputBaseStyles } from "../../../styles/mixins";
-
+import { fontFamilyStyles, inputBaseStyles } from "../../../styles/mixins";
 
 export type SelectStyles = FlattenSimpleInterpolation;
 
@@ -14,14 +12,14 @@ export const StyledSelect = styled.select`
   cursor: pointer;
 `;
 
-export const SelectOption = styled.option`
-  background-color: ${semanticTokens.background.contrast};
-  color: ${semanticTokens.text.primary};
-`;
-
 export const SelectLabel = styled.label`
   display: block;
   font-size: ${spacingTokens.fontSizes.medium};
   margin-bottom: ${spacingTokens.spacing.small};
   ${fontFamilyStyles}
+`;
+
+export const SelectOption = styled.option`
+  padding: ${spacingTokens.spacing.small};
+  font-size: ${spacingTokens.fontSizes.medium};
 `;

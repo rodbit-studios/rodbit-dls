@@ -23,7 +23,7 @@ export const inputBaseStyles = css`
 `;
 
 export const disabledStyles = css`
-  opacity: 0.5;
+  color: ${theme.colors.gray[400]}
   cursor: not-allowed;
 `;
 

@@ -1,9 +1,11 @@
 import styled, { FlattenSimpleInterpolation } from "styled-components";
 import { colorTokens, fontFamilyTokens, spacingTokens } from "../../../styles/theme/tokens";
 import { semanticTokens } from "../../../styles/theme/semantic";
+import { disabledStyles } from "../../../styles/mixins";
 
 interface RadioProps {
   checked?: boolean;
+  disabled?: boolean
 }
 
 export type RadioStyles = FlattenSimpleInterpolation;
@@ -25,16 +27,18 @@ export const StyledRadio = styled.input.attrs({ type: "radio" }) <RadioProps>`
   }
 
   &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+    ${disabledStyles}
   }
 `;
 
-export const RadioLabel = styled.label`
+export const RadioLabel = styled.label<RadioProps>`
   display: inline-flex;
   align-items: center;
   cursor: pointer;
-  gap: ${spacingTokens.spacing.medium};
+  gap: ${spacingTokens.spacing.small};
   font-size: ${spacingTokens.fontSizes.medium};
   font-family: ${fontFamilyTokens.fontFamilies.body};
+  color: ${props => props.disabled
+    ? colorTokens.core.gray[300]
+    : colorTokens.core.gray[900]};
 `;

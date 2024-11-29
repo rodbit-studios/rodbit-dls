@@ -15,7 +15,7 @@ const Checkbox: React.FC<StyledCheckbox> = ({
   onChange,
 }) => {
   return (
-    <CheckboxLabel>
+    <CheckboxLabel disabled={disabled}>
       <StyledCheckbox
         type="checkbox"
         checked={checked}

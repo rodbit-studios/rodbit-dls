@@ -1,6 +1,6 @@
 import styled, { FlattenSimpleInterpolation } from "styled-components";
 import { colorTokens, spacingTokens } from "../../../styles/theme/tokens";
-import { disabledStyles, fontFamilyStyles, hoverStyles } from "../../../styles/mixins";
+import { fontFamilyStyles, hoverStyles } from "../../../styles/mixins";
 
 interface CheckboxProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
   checked?: boolean;
@@ -24,7 +24,7 @@ export const StyledCheckbox = styled.input.attrs({ type: "checkbox" }) <Checkbox
     color: ${colorTokens.core.gray[100]};
   }
   &:disabled {
-    ${disabledStyles}
+    border-color: ${colorTokens.core.gray[300]};
     cursor: not-allowed;
   }
   ${hoverStyles}
@@ -34,9 +34,10 @@ export const CheckboxLabel = styled.label<CheckboxProps>`
   display: inline-flex;
   align-items: center;
   gap: ${spacingTokens.spacing.small};
+  color: ${props => props.disabled
+    ? colorTokens.core.gray[300]
+    : colorTokens.core.gray[900]};
 
-  //TODO
-  // FIX LABEL NOT APPLING STYLES FOR DISABLED
   ${fontFamilyStyles}
   
 `;

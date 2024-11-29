@@ -16,7 +16,7 @@ const Radio: React.FC<RadioProps> = ({
   onChange,
 }) => {
   return (
-    <RadioLabel>
+    <RadioLabel disabled={disabled}>
       <StyledRadio
         checked={checked}
         disabled={disabled}

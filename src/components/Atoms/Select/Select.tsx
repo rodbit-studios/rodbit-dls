@@ -18,9 +18,8 @@ const Select: React.FC<SelectProps> = ({
 }) => {
   return (
     <div>
-      {label && <SelectLabel>{label}</SelectLabel>}
+      <SelectLabel>{label}</SelectLabel>
       <StyledSelect value={value} onChange={onChange} disabled={disabled}>
-        <SelectOption value="">Select an option</SelectOption>
         {options.map((option) => (
           <SelectOption key={option.value} value={option.value}>
             {option.label}

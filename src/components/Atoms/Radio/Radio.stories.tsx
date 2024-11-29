@@ -17,13 +17,13 @@ export default meta;
 
 export const Default: StoryObj<typeof Radio> = {
   args: {
-    label: "Option A",
+    label: "Default",
   },
 };
 
 export const Checked: StoryObj<typeof Radio> = {
   args: {
-    label: "Option B",
+    label: "Checked",
     checked: true,
     disabled: false,
   },
@@ -31,7 +31,7 @@ export const Checked: StoryObj<typeof Radio> = {
 
 export const Disabled: StoryObj<typeof Radio> = {
   args: {
-    label: "Option C",
+    label: "Disabled",
     checked: false,
     disabled: true,
   },

@@ -19,6 +19,7 @@ export const Default: StoryObj<typeof Input> = {
   args: {
     variant: "default",
     placeholder: "Input",
+    label: "Label"
   },
 };
 
@@ -26,5 +27,6 @@ export const Filled: StoryObj<typeof Input> = {
   args: {
     variant: "filled",
     placeholder: "Input",
+    label: "Label"
   },
 };

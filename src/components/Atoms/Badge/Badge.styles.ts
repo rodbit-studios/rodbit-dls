@@ -8,7 +8,7 @@ export type BadgeStyles = FlattenSimpleInterpolation;
 export const StyledBadge = styled.label<BadgeStyles>`
   background-color: ${colorTokens.core.blue.primary};
   border: 1px solid ${colorTokens.core.gray[500]};
-  border-radius: ${spacingTokens.borderRadius.medium};
+  border-radius: ${spacingTokens.borderRadius.xLarge};
   font-size: ${spacingTokens.fontSizes.small};
   padding: ${spacingTokens.spacing.small};
   text-transform: uppercase;

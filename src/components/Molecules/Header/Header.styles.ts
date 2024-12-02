@@ -1,5 +1,5 @@
 import styled, { FlattenSimpleInterpolation } from "styled-components";
-import { colorTokens, spacingTokens } from "../../../styles/theme/tokens";
+import { spacingTokens } from "../../../styles/theme/tokens";
 
 interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   imgSource?: string

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { TabContainer, TabButton, TabContent } from "./Tabs.styles";
 
 interface Tab {
-  label: string;
+  label: string | React.ReactNode;
   content: React.ReactNode;
   disabled?: boolean;
 }

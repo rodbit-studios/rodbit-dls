@@ -6,6 +6,8 @@ interface ButtonProps {
   size?: "small" | "medium" | "large";
   children: React.ReactNode;
   onClick?: () => void;
+  leftIcon?: React.ReactNode;
+  rightIcon?: React.ReactNode;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -13,10 +15,14 @@ const Button: React.FC<ButtonProps> = ({
   size = "medium",
   children,
   onClick,
+  leftIcon,
+  rightIcon
 }) => {
   return (
-    <StyledButton variant={variant} size={size} onClick={onClick}>
+    <StyledButton variant={variant} size={size} onClick={onClick} >
+      {leftIcon}
       {children}
+      {rightIcon}
     </StyledButton>
   );
 };

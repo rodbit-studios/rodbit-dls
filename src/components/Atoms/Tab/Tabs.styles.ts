@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colorTokens, spacingTokens } from "../../../styles/theme/tokens";
+import { fontFamilyStyles } from "../../../styles/mixins";
 
 interface TabProps {
   active?: boolean;
@@ -34,4 +35,5 @@ export const TabButton = styled.button<TabProps>`
 
 export const TabContent = styled.div`
   padding: ${spacingTokens.spacing.medium};
+  ${fontFamilyStyles}
 `;

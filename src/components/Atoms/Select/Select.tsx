@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledSelect, SelectOption, SelectLabel } from "./Select.styles";
+import { StyledSelect, SelectOption, SelectLabel, SelectWrapper } from "./Select.styles";
 
 interface SelectProps {
   label?: string;
@@ -17,7 +17,7 @@ const Select: React.FC<SelectProps> = ({
   disabled,
 }) => {
   return (
-    <div>
+    <SelectWrapper>
       <SelectLabel>{label}</SelectLabel>
       <StyledSelect value={value} onChange={onChange} disabled={disabled}>
         {options.map((option) => (
@@ -26,7 +26,7 @@ const Select: React.FC<SelectProps> = ({
           </SelectOption>
         ))}
       </StyledSelect>
-    </div>
+    </SelectWrapper>
   );
 };
 

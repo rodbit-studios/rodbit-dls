@@ -1,42 +1,39 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.title {
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-list {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.checkbox-list {
+  display: flex;
+  margin-top: 20px;
+  gap: 1rem;
 }
 
-.card {
-  padding: 2em;
+.radio-list {
+  display: flex;
+  margin-top: 20px;
+  gap: 1rem;
 }
 
-.read-the-docs {
-  color: #888;
+.toggle-list {
+  display: flex;
+  margin-top: 20px;
+  gap: 1rem;
+}
+
+.select-list {
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
 }

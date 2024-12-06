@@ -18,12 +18,12 @@ export const StyledRadio = styled.input.attrs({ type: "radio" }) <RadioProps>`
   cursor: pointer;
 
   &:checked {
-    border-color: ${semanticTokens.button.primary.background};
-    background-color: ${semanticTokens.button.primary.background};
-  }
-
-  &:focus-visible {
-    box-shadow: 0 0 0 2px ${semanticTokens.button.primary.text};
+    appearance: none;
+    background-color: ${colorTokens.core.blue.primary};
+    border-color: ${colorTokens.core.blue.primary};
+    background-image: url("data:image/svg+xml,%3csvg  viewBox='0 0 16 16' width='16' height='16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 
   &:disabled {

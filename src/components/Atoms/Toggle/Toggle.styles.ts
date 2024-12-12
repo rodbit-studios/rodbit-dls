@@ -1,6 +1,6 @@
 import styled, { FlattenSimpleInterpolation } from "styled-components";
-import { colorTokens, spacingTokens } from "../../../styles/theme/tokens";
-import { fontFamilyStyles } from "../../../styles/mixins";
+import { colorTokens, spacingTokens } from "@styles/theme/tokens";
+import { fontFamilyStyles } from "@styles/mixins";
 
 interface ToggleProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
   checked?: boolean;
@@ -15,7 +15,7 @@ export const StyledToggle = styled.input.attrs({ type: "checkbox" }) <ToggleProp
   width: 44px;
   height: 24px;
   border-radius: ${spacingTokens.borderRadius.large};
-  background-color: ${colorTokens.core.gray[300]};
+  background-color: ${colorTokens.gray.primary};
   cursor: pointer;
 
   &::after {
@@ -26,25 +26,25 @@ export const StyledToggle = styled.input.attrs({ type: "checkbox" }) <ToggleProp
     width: 20px;
     height: 20px;
     border-radius: ${spacingTokens.borderRadius.large};
-    background-color: ${colorTokens.core.gray[100]};
+    background-color: ${colorTokens.blue.primary};
     transition: transform 0.2s ease;
   }
 
   &:checked {
-    background-color: ${colorTokens.core.blue.primary};
+    background-color: ${colorTokens.blue.primary};
     
     &::after {
       transform: translateX(20px);
-      background-color: ${colorTokens.core.gray[100]};
+      background-color: ${colorTokens.gray.primary};
     }
   }
 
   &:disabled {
     cursor: not-allowed;
-    background-color: ${colorTokens.core.gray[200]};
+    background-color: ${colorTokens.gray.primary};
 
     &::after {
-      background-color: ${colorTokens.core.gray[300]};
+      background-color: ${colorTokens.gray.secondary};
     }
   }
 `;
@@ -55,8 +55,8 @@ export const ToggleLabel = styled.label<ToggleProps>`
   gap: ${spacingTokens.spacing.small};
   
   color: ${props => props.disabled
-    ? colorTokens.core.gray[300]
-    : colorTokens.core.gray[900]};
+    ? colorTokens.gray.primary
+    : colorTokens.gray.secondary};
   
   cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
   

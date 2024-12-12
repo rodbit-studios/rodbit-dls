@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { colorTokens, spacingTokens } from "../../../styles/theme/tokens";
-import { fontFamilyStyles } from "../../../styles/mixins";
+import { colorTokens, spacingTokens } from "@styles/theme/tokens";
+import { fontFamilyStyles } from "@styles/mixins";
 
 interface TabProps {
   active?: boolean;
@@ -9,7 +9,7 @@ interface TabProps {
 
 export const TabContainer = styled.div`
   display: flex;
-  border-bottom: 1px solid ${colorTokens.core.gray[300]};
+  border-bottom: 1px solid ${colorTokens.gray.primary};
 `;
 
 export const TabButton = styled.button<TabProps>`
@@ -19,17 +19,18 @@ export const TabButton = styled.button<TabProps>`
   cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
   
   color: ${props => props.active
-    ? colorTokens.core.blue.primary
+    ? colorTokens.blue.primary
     : props.disabled
-      ? colorTokens.core.gray[300]
-      : colorTokens.core.gray[900]};
+      ? colorTokens.gray.primary
+      : colorTokens.gray.secondary};
   
   border-bottom: 2px solid ${props => props.active
-    ? colorTokens.core.blue.primary
+    ? colorTokens.blue.primary
     : 'transparent'};
   
   &:hover:not(:disabled) {
-    background-color: ${colorTokens.core.gray[100]};
+    color: ${colorTokens.blue.secondary};
+    border-bottom: 2px solid ${colorTokens.blue.secondary};
   }
 `;
 

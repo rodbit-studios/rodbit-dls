@@ -26,4 +26,3 @@ export const Outline: StoryObj<typeof Badge> = {
     variant: "outline",
   },
 };
-

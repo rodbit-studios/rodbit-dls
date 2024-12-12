@@ -1,11 +1,10 @@
 import { colorTokens, fontFamilyTokens, spacingTokens } from "./tokens";
-import { semanticTokens } from "./semantic";
 
 export type Theme = typeof theme;
 
 export const theme = {
   colors: {
-    ...colorTokens.core,
+    ...colorTokens,
   },
   spacing: {
     ...spacingTokens.spacing,
@@ -17,7 +16,6 @@ export const theme = {
     ...spacingTokens.fontSizes,
   },
   ...fontFamilyTokens,
-  ...semanticTokens,
 } as const;
 
 export default theme;

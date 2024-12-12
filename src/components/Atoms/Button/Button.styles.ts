@@ -1,11 +1,9 @@
 import styled, { css, FlattenSimpleInterpolation } from "styled-components";
-import { theme } from "../../../styles/theme/index.ts";
-import { colorTokens, spacingTokens } from "../../../styles/theme/tokens";
+import { colorTokens, spacingTokens } from "@styles/theme/tokens";
 
 interface ButtonProps {
   variant?: "filled" | "outline" | "text";
   size?: "small" | "medium" | "large";
-  theme: typeof theme;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
 }
@@ -37,31 +35,31 @@ export const StyledButton = styled.button<ButtonProps>`
   ${({ variant }) =>
     variant === "filled"
       ? css`
-          background-color: ${colorTokens.core.blue.primary};
-          color: ${colorTokens.core.gray[100]};
+          background-color: ${colorTokens.blue.primary};
+          color: ${colorTokens.white};
 
           &:hover {
-            background-color: ${colorTokens.core.blue.dark};
+            background-color: ${colorTokens.blue.secondary};
           }
         `
       : variant === "outline"
         ? css`
             background-color: transparent;
-            color: ${colorTokens.core.blue.primary};
-            border: 1px solid ${colorTokens.core.blue.primary};
+            color: ${colorTokens.blue.primary};
+            border: 1px solid ${colorTokens.blue.primary};
 
             &:hover {
-              background-color: ${colorTokens.core.blue.dark};
-              color: ${colorTokens.core.gray[100]};
-              border: 1px solid ${colorTokens.core.blue.dark};
+              background-color: ${colorTokens.blue.secondary};
+              color: ${colorTokens.white};
+              border: 1px solid ${colorTokens.blue.secondary};
             }
           `
         : css`
             background-color: transparent;
-            color: ${colorTokens.core.blue.primary};
+            color: ${colorTokens.blue.primary};
 
             &:hover {
-              color: ${colorTokens.core.blue.dark};
+              color: ${colorTokens.blue.secondary};
             }
           `}
 `;

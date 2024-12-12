@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { colorTokens, spacingTokens } from '../../../styles/theme/tokens';
-import { fontFamilyStyles, inputBaseStyles } from '../../../styles/mixins';
+import { colorTokens, spacingTokens } from '@styles/theme/tokens';
+import { fontFamilyStyles, inputBaseStyles } from '@styles/mixins';
 
 export const TextareaWrapper = styled.div<{ $fullWidth?: boolean }>`
   width: ${props => props.$fullWidth ? '100%' : 'auto'};
@@ -24,10 +24,10 @@ export const TextareaContainer = styled.div<{
 
   border: 1px solid ${props =>
     props.$error
-      ? colorTokens.core.red.primary
+      ? colorTokens.red.primary
       : props.$disabled
-        ? colorTokens.core.gray[300]
-        : colorTokens.core.blue.primary
+        ? colorTokens.gray.primary
+        : colorTokens.blue.primary
   };
 
   border-radius: ${spacingTokens.borderRadius.medium};
@@ -55,8 +55,8 @@ export const HelperText = styled.p<{ $error?: boolean }>`
   font-size: ${spacingTokens.fontSizes.small};
   color: ${props =>
     props.$error
-      ? colorTokens.core.red.primary
-      : colorTokens.core.gray[400]
+      ? colorTokens.red.primary
+      : colorTokens.gray.primary
   };
   ${fontFamilyStyles}
 `;

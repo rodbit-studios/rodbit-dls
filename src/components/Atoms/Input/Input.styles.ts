@@ -1,7 +1,6 @@
 import styled, { css, FlattenSimpleInterpolation } from "styled-components";
-import { semanticTokens } from "../../../styles/theme/semantic.ts";
-import { colorTokens, spacingTokens } from "../../../styles/theme/tokens.ts";
-import { disabledStyles, focusStyles, fontFamilyStyles, hoverStyles, inputBaseStyles } from "../../../styles/mixins.ts";
+import { colorTokens, spacingTokens } from "@styles/theme/tokens.ts";
+import { focusStyles, fontFamilyStyles, inputBaseStyles } from "@styles/mixins";
 
 interface InputProps {
   variant?: "default" | "filled";
@@ -17,32 +16,31 @@ export const StyledInput = styled.input<InputProps>`
   ${({ variant }) =>
     variant === "default"
       ? css`
-          border: 1px solid ${colorTokens.core.blue.primary};
+          border: 1px solid ${colorTokens.blue.primary};
           border-radius: ${spacingTokens.borderRadius.medium};
-          &:hover {
-            border: 1px solid ${colorTokens.core.blue.dark};
-          }
           margin-top: ${spacingTokens.spacing.small};
+
+          &:hover {
+            border: 1px solid ${colorTokens.blue.secondary};
+          }
         `
       : css`
-          color: ${semanticTokens.text.primary};
-          background-color: ${semanticTokens.button.primary.background};
+          background-color: ${colorTokens.blue.muted};
           border-radius: ${spacingTokens.borderRadius.medium};
-          border: 1px solid ${colorTokens.core.blue.primary};
+          border: 1px solid ${colorTokens.blue.primary};
           &:hover {
-            border: 1px solid ${colorTokens.core.blue.dark};
+            border: 1px solid ${colorTokens.blue.secondary};
           }
           margin-top: ${spacingTokens.spacing.small};
         `}
   ${focusStyles}
-  ${hoverStyles}
   ${fontFamilyStyles}
 `;
 
 export const InputLabel = styled.label<InputProps>`
   display: flex;
   flex-direction: column;
-  color: ${colorTokens.core.gray[900]};
+  color: ${colorTokens.black};
   font-size: ${spacingTokens.spacing.medium};
   ${fontFamilyStyles}
 `;

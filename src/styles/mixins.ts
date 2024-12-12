@@ -3,12 +3,13 @@ import theme from "./theme";
 
 export const focusStyles = css`
   &:focus-visible {
-    box-shadow: 0 0 0 2px ${theme.background.muted};
+    box-shadow: 0 0 2px 2px ${theme.colors.gray.primary};
   }
 `;
 
 export const hoverStyles = css`
   &:hover {
+    border-color: ${theme.colors.blue.secondary};
   }
 `;
 
@@ -23,7 +24,7 @@ export const inputBaseStyles = css`
 `;
 
 export const disabledStyles = css`
-  color: ${theme.colors.gray[400]}
+  color: ${theme.colors.gray.primary};
   cursor: not-allowed;
 `;
 

@@ -1,34 +1,28 @@
 import styled, { css, FlattenSimpleInterpolation } from "styled-components";
-import { colorTokens, spacingTokens } from "../../../styles/theme/tokens";
-import { semanticTokens } from "../../../styles/theme/semantic";
-import { fontFamilyStyles } from "../../../styles/mixins";
+import { colorTokens, spacingTokens } from "@styles/theme/tokens";
+import { disabledStyles, fontFamilyStyles } from "@styles/mixins";
 
 export type BadgeStyles = FlattenSimpleInterpolation;
 
 export const StyledBadge = styled.label<BadgeStyles>`
-  background-color: ${colorTokens.core.blue.primary};
-  border: 1px solid ${colorTokens.core.gray[500]};
+  background-color: ${colorTokens.blue.primary};
+  border: 1px solid ${colorTokens.gray.primary};
   border-radius: ${spacingTokens.borderRadius.xLarge};
   font-size: ${spacingTokens.fontSizes.small};
   padding: ${spacingTokens.spacing.small};
   text-transform: uppercase;
 
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-
   ${({ variant }) =>
     variant === "filled"
       ? css`
-          background-color: ${colorTokens.core.blue.primary};
-          color: ${semanticTokens.text.primary};
+          background-color: ${colorTokens.blue.primary};
+          color: ${colorTokens.white};
           border: none;
         `
       : css`
           background-color: transparent;
-          color: ${colorTokens.core.blue.primary};
-          border: 1px solid ${colorTokens.core.blue.primary};
+          color: ${colorTokens.blue.primary};
+          border: 1px solid ${colorTokens.blue.primary};
         `}
   ${fontFamilyStyles}
 `;

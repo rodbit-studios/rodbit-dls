@@ -4,36 +4,14 @@
   text-align: center;
 }
 
-.title {
-}
-
-.button-list {
-  display: flex;
-  justify-content: end;
-  gap: 1rem;
+.alert-list, .tabs-list{
   margin-top: 20px;
 }
 
-.checkbox-list {
+.spacing-list {
   display: flex;
+  justify-content: space-evenly;
   margin-top: 20px;
   gap: 1rem;
 }
 
-.radio-list {
-  display: flex;
-  margin-top: 20px;
-  gap: 1rem;
-}
-
-.toggle-list {
-  display: flex;
-  margin-top: 20px;
-  gap: 1rem;
-}
-
-.select-list {
-  display: flex;
-  gap: 1rem;
-  margin-top: 20px;
-}

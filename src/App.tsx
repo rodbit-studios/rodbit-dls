@@ -9,6 +9,7 @@ import Textarea from "./components/Atoms/Textarea/Textarea";
 import Alert from "./components/Atoms/Alert/Alert";
 import Badge from "./components/Atoms/Badge/Badge";
 import Input from "./components/Atoms/Input/Input";
+import Skeleton from "./components/Atoms/Skeleton/Skeleton";
 
 function App() {
   return (
@@ -45,6 +46,10 @@ function App() {
         <div className="spacing-list">
           <Select label="Select 1" options={[{ label: "Option 1", value: "option1" }, { label: "Option 2", value: "option2" },]} />
           <Select label="Select 2" options={[{ label: "Option 2", value: "option2" }, { label: "Option 3", value: "option3" },]} />
+        </div>
+        <div className="spacing-list">
+          <Skeleton variant="circular" animation="wave" width="50px" height="50px" />
+          <Skeleton animation="wave" width="88%" height="50px" />
         </div>
         <div className="tabs-list">
           <Tabs tabs={[{ label: "Tab 1", content: "tab1" }, { label: "Tab 2", content: "tab2" }, { label: "Tab 3", content: "tab3" },]} />

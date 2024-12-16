@@ -1,16 +1,16 @@
 import React from "react";
 import { StyledBadge } from "./Badge.styles";
 
-interface BadgeProps {
+export interface BadgeProps {
   label?: string;
   disabled?: boolean;
-  variant?: "filled" | "outline";
+  variant?: "info" | "warning" | "sucess" | "error";
 }
 
 const Badge: React.FC<BadgeProps> = ({
   label,
   disabled,
-  variant = "filled",
+  variant,
 }) => {
   return (
     <StyledBadge disabled={disabled} variant={variant}>

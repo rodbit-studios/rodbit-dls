@@ -1,20 +1,23 @@
 import React from "react";
-import { AlertBody, AlertHeader, StyledAlert } from "./Alert.styles";
+import { StyledAlert, AlertHeader, AlertBody, AlertIcon } from "./Alert.styles";
 
-interface AlertProps {
+export interface AlertProps {
   title?: string;
   body?: string;
-  variant?: "filled" | "outline";
+  icon?: React.ReactNode;
+  variant?: "info" | "warning" | "sucess" | "error";
 }
 
 const Alert: React.FC<AlertProps> = ({
   title,
   body,
-  variant = "filled",
+  icon,
+  variant,
 }) => {
   return (
     <StyledAlert variant={variant}>
       <AlertHeader variant={variant}>
+        <AlertIcon>{icon}</AlertIcon>
         {title}
       </AlertHeader>
       <AlertBody>

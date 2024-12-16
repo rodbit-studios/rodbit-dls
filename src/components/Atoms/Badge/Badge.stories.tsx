@@ -14,15 +14,30 @@ const meta: Meta<typeof Badge> = {
 
 export default meta;
 
-export const Filled: StoryObj<typeof Badge> = {
+export const Info: StoryObj<typeof Badge> = {
   args: {
-    label: "Badge",
+    label: "Info",
+    variant: "info",
   },
 };
 
-export const Outline: StoryObj<typeof Badge> = {
+export const Warning: StoryObj<typeof Badge> = {
   args: {
-    label: "Badge",
-    variant: "outline",
+    label: "Warning",
+    variant: "warning",
+  },
+};
+
+export const Sucess: StoryObj<typeof Badge> = {
+  args: {
+    label: "Sucess",
+    variant: "sucess",
+  },
+};
+
+export const Error: StoryObj<typeof Badge> = {
+  args: {
+    label: "Error",
+    variant: "error",
   },
 };

@@ -1,65 +1,44 @@
 export const colorTokens = {
-  // Primary colors
   primary: {
-    lightest: '#E6F2FF',
-    lighter: '#B3DBFF',
-    light: '#66B2FF',
-    main: '#0070F3',
-    dark: '#0050C8',
-    darkest: '#003A96'
+    blue: {
+      main: "#0288B0",
+      light: "#C9FBF8",
+      dark: "#014C63"
+    },
+    red: {
+      main: "#FF3B30",
+      light: "#FFE5D5",
+      dark: "#7A0929"
+    }
   },
-  // Secondary colors
-  secondary: {
-    lightest: '#F0F0F0',
-    lighter: '#D9D9D9',
-    light: '#A6A6A6',
-    main: '#808080',
-    dark: '#595959',
-    darkest: '#404040'
-  },
-  // Success colors
   success: {
-    lightest: '#E6F7ED',
-    lighter: '#A6E5BD',
-    light: '#4CD964',
-    main: '#34C759',
-    dark: '#2BAD4E',
-    darkest: '#1E8C3F'
+    main: "#179E44",
+    light: "#D1FACF",
+    dark: "#044B38",
   },
   // Error/Danger colors
   error: {
-    lightest: '#FFEBEE',
-    lighter: '#FFCDD2',
-    light: '#FF5252',
-    main: '#FF3B30',
-    dark: '#D32F2F',
-    darkest: '#B71C1C'
+    main: "#FF3B30",
+    light: "#FFE5D5",
+    dark: "#7A0929"
   },
   // Warning colors
   warning: {
-    lightest: '#FFF4E5',
-    lighter: '#FFE0B2',
-    light: '#FFA726',
-    main: '#FF9800',
-    dark: '#F57C00',
-    darkest: '#E65100'
+    main: "#FFC857",
+    light: "#FFF8DD",
+    dark: "#7A4910",
   },
   // Information colors
   info: {
-    lightest: '#E3F2FD',
-    lighter: '#BBDEFB',
-    light: '#64B5F6',
-    main: '#2196F3',
-    dark: '#1976D2',
-    darkest: '#0D47A1'
+    main: "#086FD6",
+    light: "#CCEEFC",
+    dark: "#011F66",
   },
   // Neutral colors
   neutral: {
-    white: '#FFFFFF',
-    black: '#000000',
-    background: '#F5F5F5',
-    border: '#E0E0E0',
-    text: '#333333'
+    white: "#FAFCFC",
+    black: "#262626",
+    gray: "#9EA3A3",
   },
 } as const;
 
@@ -71,30 +50,34 @@ export const fontFamilyTokens = {
 
 export const spacingTokens = {
   spacing: {
-    xs: 4,
-    sm: 8,
-    md: 16,
-    lg: 24,
-    xl: 32,
+    xs: `4px`,
+    sm: `8px`,
+    md: `16px`,
+    lg: `24px`,
+    xl: `32px`,
   },
   borderRadius: {
-    xs: 4,
-    sm: 8,
-    md: 16,
-    lg: 24,
-    xl: 32,
+    xs: `4px`,
+    sm: `8px`,
+    md: `16px`,
+    lg: `24px`,
+    xl: `32px`,
   },
   fontSizes: {
-    xs: 12,
-    sm: 14,
-    md: 16,
-    lg: 18,
-    xl: 20,
+    xs: `12px`,
+    sm: `14px`,
+    md: `16px`,
+    lg: `18px`,
+    xl: `20px`,
   },
 } as const;
 
 export type ColorVariant = keyof typeof colorTokens;
-export type ColorLevel = keyof (typeof colorTokens)[Exclude<ColorVariant, 'neutral'>];
+export type ColorLevel =
+  | 'main'
+  | 'light'
+  | 'dark'
+  | keyof typeof colorTokens['neutral'];
 
 export const getColor = (
   variant: ColorVariant = 'primary',
@@ -102,12 +85,17 @@ export const getColor = (
 ): string => {
   // Special handling for neutral colors
   if (variant === 'neutral') {
-    throw new Error('Neutral colors do not have levels');
+    return colorTokens.neutral[level as keyof typeof colorTokens['neutral']];
   }
-  return colorTokens[variant][level];
+  const variantColors = colorTokens[variant];
+
+  if (typeof variantColors === "object" && !('main' in variantColors)) {
+    return variantColors.blue[level as 'main' | 'light' | 'dark'];
+  }
+
+  return variantColors[level as 'main' | 'light' | 'dark'];
 };
 
-// Optional: Add a separate method for neutral colors
 export const getNeutralColor = (
   shade: keyof typeof colorTokens['neutral']
 ): string => {

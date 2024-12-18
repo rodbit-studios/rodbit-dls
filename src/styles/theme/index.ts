@@ -15,7 +15,9 @@ export const theme = {
   fontSizes: {
     ...spacingTokens.fontSizes,
   },
-  ...fontFamilyTokens,
+  fontFamily: {
+    ...fontFamilyTokens,
+  }
 } as const;
 
 export default theme;

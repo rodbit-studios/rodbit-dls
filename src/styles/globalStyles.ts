@@ -21,7 +21,7 @@ export const GlobalStyles = createGlobalStyle`
 
   :focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px ${theme.colors.gray.primary};
+    box-shadow: 0 0 0 2px ${theme.colors.neutral.gray};
   }
 
   input,

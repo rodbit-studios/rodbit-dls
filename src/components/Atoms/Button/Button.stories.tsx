@@ -30,6 +30,7 @@ export const Outline: StoryObj<typeof Button> = {
   args: {
     variant: "outline",
     children: "Button",
+    color: "success",
   },
 };
 
@@ -52,3 +53,33 @@ export const IconRight: StoryObj<typeof Button> = {
     rightIcon: <FaAngleRight />,
   },
 };
+
+export const Sucess: StoryObj<typeof Button> = {
+  args: {
+    children: "Button",
+    color: "success",
+  },
+};
+
+export const Error: StoryObj<typeof Button> = {
+  args: {
+    children: "Button",
+    color: "error",
+  },
+};
+
+export const Disabled: StoryObj<typeof Button> = {
+  args: {
+    children: "Button",
+    disabled: true,
+  },
+};
+
+export const OutlineColor: StoryObj<typeof Button> = {
+  args: {
+    children: "Button",
+    variant: "outline",
+    color: "success",
+  },
+};
+

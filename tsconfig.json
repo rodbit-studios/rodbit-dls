@@ -1,4 +1,25 @@
 {
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@styles/*": [
+        "./src/styles/*"
+      ]
+    },
+    "target": "ES2020",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "types": [
+      "styled-components"
+    ]
+  },
   "files": [],
   "references": [
     {
@@ -8,14 +29,6 @@
       "path": "./tsconfig.node.json"
     }
   ],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@styles/*": [
-        "./src/styles/*"
-      ],
-    }
-  },
   "include": [
     "src"
   ]

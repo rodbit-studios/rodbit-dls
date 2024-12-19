@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledSelect, SelectOption, SelectLabel, SelectWrapper } from "./Select.styles";
 
-interface SelectProps {
+export interface SelectProps {
   label?: string;
   options: { label: string; value: string }[];
   value?: string;

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { TabContainer, TabButton, TabContent } from "./Tabs.styles";
 
-interface Tab {
+export interface Tab {
   label: string | React.ReactNode;
   content: React.ReactNode;
+  active?: boolean;
   disabled?: boolean;
 }
 
-interface TabsProps {
+export interface TabsProps {
   tabs: Tab[];
   activeTab?: number;
   onTabChange?: (index: number) => void;

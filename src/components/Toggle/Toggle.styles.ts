@@ -1,13 +1,8 @@
-import styled, { FlattenSimpleInterpolation } from "styled-components";
+import styled from "styled-components";
 import { colorTokens, spacingTokens } from "@styles/theme/tokens";
 import { fontFamilyStyles } from "@styles/mixins";
+import { ToggleProps } from "./Toggle";
 
-interface ToggleProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
-  checked?: boolean;
-  disabled?: boolean;
-}
-
-export type ToggleStyles = FlattenSimpleInterpolation;
 
 export const StyledToggle = styled.input.attrs({ type: "checkbox" }) <ToggleProps>`
   appearance: none;
@@ -15,7 +10,7 @@ export const StyledToggle = styled.input.attrs({ type: "checkbox" }) <ToggleProp
   width: 44px;
   height: 24px;
   border-radius: ${spacingTokens.borderRadius.lg};
-  background-color: ${colorTokens.neutral.gray};
+  background-color: ${colorTokens.neutral.lightgray};
   cursor: pointer;
 
   &::after {
@@ -35,16 +30,16 @@ export const StyledToggle = styled.input.attrs({ type: "checkbox" }) <ToggleProp
     
     &::after {
       transform: translateX(20px);
-      background-color: ${colorTokens.neutral.gray};
+      background-color: ${colorTokens.neutral.white};
     }
   }
 
   &:disabled {
     cursor: not-allowed;
-    background-color: ${colorTokens.neutral.gray};
+    background-color: ${colorTokens.neutral.lightgray};
 
     &::after {
-      background-color: ${colorTokens.neutral.black};
+      background-color: ${colorTokens.neutral.gray};
     }
   }
 `;

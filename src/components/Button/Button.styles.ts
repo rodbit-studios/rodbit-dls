@@ -1,8 +1,6 @@
-import styled, { css, FlattenSimpleInterpolation } from "styled-components";
+import styled, { css } from "styled-components";
 import { colorTokens, spacingTokens, getColor } from "@styles/theme/tokens";
 import { ButtonProps } from "./Button";
-
-export type ButtonStyles = FlattenSimpleInterpolation;
 
 export const StyledButton = styled.button<ButtonProps>`
   display: flex;

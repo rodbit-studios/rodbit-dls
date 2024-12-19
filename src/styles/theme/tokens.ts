@@ -39,6 +39,7 @@ export const colorTokens = {
     white: "#FAFCFC",
     black: "#262626",
     gray: "#9EA3A3",
+    lightgray: "#E4E4E4",
   },
 } as const;
 

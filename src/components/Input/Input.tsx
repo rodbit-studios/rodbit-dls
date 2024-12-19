@@ -1,18 +1,18 @@
 import React from "react";
 import { StyledInput, InputLabel } from "./Input.styles";
 
-interface InputProps {
-  label: string;
+export interface InputProps {
+  label?: string;
   variant?: "default" | "filled";
   placeholder?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: React.FC<InputProps> = ({ label, variant = "default" }) => {
+const Input: React.FC<InputProps> = ({ variant = "default", label, placeholder }) => {
   return (
     <InputLabel>
       {label}
-      <StyledInput variant={variant} />
+      <StyledInput variant={variant} placeholder={placeholder} />
     </InputLabel>
   )
 };

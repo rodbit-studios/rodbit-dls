@@ -5,16 +5,7 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
   component: Button,
-  argTypes: {
-    variant: {
-      options: ["filled", "outline", "text"],
-      control: { type: "radio" },
-    },
-    size: {
-      options: ["small", "medium", "large"],
-      control: { type: "radio" },
-    },
-  },
+  argTypes: {},
   tags: ["autodocs"],
 };
 
@@ -79,7 +70,7 @@ export const OutlineColor: StoryObj<typeof Button> = {
   args: {
     children: "Button",
     variant: "outline",
-    color: "success",
+    color: "error",
   },
 };
 

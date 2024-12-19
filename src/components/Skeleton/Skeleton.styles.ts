@@ -1,12 +1,6 @@
 import styled, { keyframes, css } from 'styled-components';
 import { colorTokens, spacingTokens } from '@styles/theme/tokens';
-
-type SkeletonProps = {
-  variant?: 'text' | 'circular' | 'rectangular'
-  width?: string | number
-  height?: string | number
-  animation?: 'pulse' | 'wave' | 'none'
-}
+import { SkeletonProps } from './Skeleton';
 
 const pulseAnimation = keyframes`
   0% {

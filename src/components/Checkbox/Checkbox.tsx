@@ -1,14 +1,14 @@
 import React from "react";
 import { StyledCheckbox, CheckboxLabel } from "./Checkbox.styles";
 
-interface StyledCheckbox {
+export interface CheckboxProps {
   label?: string;
   checked?: boolean;
   disabled?: boolean;
   onChange?: () => void;
 }
 
-const Checkbox: React.FC<StyledCheckbox> = ({
+const Checkbox: React.FC<CheckboxProps> = ({
   label,
   checked,
   disabled,

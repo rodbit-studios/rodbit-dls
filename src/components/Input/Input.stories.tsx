@@ -4,12 +4,7 @@ import Input from "./Input";
 const meta: Meta<typeof Input> = {
   title: "Components/Input",
   component: Input,
-  argTypes: {
-    variant: {
-      options: ["default", "filled"],
-      control: { type: "radio" },
-    },
-  },
+  argTypes: {},
   tags: ["autodocs"],
 };
 

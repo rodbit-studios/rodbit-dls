@@ -1,5 +1,8 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
+    "composite": true,
+    "outDir": "./dist",
     "baseUrl": "./src",
     "paths": {
       "@styles/*": [
@@ -26,7 +29,6 @@
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
     "jsx": "react-jsx",
     /* Linting */
     "strict": true,

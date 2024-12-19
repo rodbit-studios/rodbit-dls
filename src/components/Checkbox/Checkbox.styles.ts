@@ -1,13 +1,7 @@
-import styled, { FlattenSimpleInterpolation } from "styled-components";
+import styled from "styled-components";
 import { colorTokens, spacingTokens } from "@styles/theme/tokens";
-import { fontFamilyStyles, hoverStyles } from "@styles/mixins";
-
-interface CheckboxProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
-  checked?: boolean;
-  disabled?: boolean;
-}
-
-export type CheckboxStyles = FlattenSimpleInterpolation;
+import { fontFamilyStyles, } from "@styles/mixins";
+import { CheckboxProps } from "./Checkbox";
 
 export const StyledCheckbox = styled.input.attrs({ type: "checkbox" }) <CheckboxProps>`
   appearance: none;
@@ -15,7 +9,7 @@ export const StyledCheckbox = styled.input.attrs({ type: "checkbox" }) <Checkbox
   width: ${spacingTokens.spacing.md};
   height: ${spacingTokens.spacing.md};
   border: 1px solid ${colorTokens.neutral.black};
-  border-radius: 4px;
+  border-radius: ${spacingTokens.borderRadius.xs};
   
   &:checked {
     border-color: ${colorTokens.primary.blue.main};

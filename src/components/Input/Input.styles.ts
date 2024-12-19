@@ -1,15 +1,9 @@
-import styled, { css, FlattenSimpleInterpolation } from "styled-components";
+import styled, { css } from "styled-components";
 import { colorTokens, spacingTokens } from "@styles/theme/tokens.ts";
-import { fontFamilyStyles, inputBaseStyles } from "@styles/mixins";
-
-interface InputProps {
-  variant?: "default" | "filled";
-}
-
-export type InputStyles = FlattenSimpleInterpolation;
+import { fontFamilyStyles } from "@styles/mixins";
+import { InputProps } from "./Input";
 
 export const StyledInput = styled.input<InputProps>`
-  ${inputBaseStyles}
   padding: ${spacingTokens.spacing.sm};
   font-size: ${spacingTokens.spacing.md};
 
@@ -17,7 +11,7 @@ export const StyledInput = styled.input<InputProps>`
     variant === "default"
       ? css`
           border: 1px solid ${colorTokens.primary.blue.main};
-          border-radius: ${spacingTokens.borderRadius.md};
+          border-radius: ${spacingTokens.borderRadius.sm};
           margin-top: ${spacingTokens.spacing.sm};
 
           &:hover {
@@ -25,9 +19,9 @@ export const StyledInput = styled.input<InputProps>`
           }
         `
       : css`
-          background-color: ${colorTokens.primary.blue.light};
-          border-radius: ${spacingTokens.borderRadius.md};
-          border: 1px solid ${colorTokens.primary.blue.main};
+          background-color: ${colorTokens.neutral.lightgray};
+          border-radius: ${spacingTokens.borderRadius.sm};
+          border: 1px solid ${colorTokens.neutral.gray};
           &:hover {
             border: 1px solid ${colorTokens.primary.blue.dark};
           }
@@ -36,7 +30,7 @@ export const StyledInput = styled.input<InputProps>`
   ${fontFamilyStyles}
 `;
 
-export const InputLabel = styled.label<InputProps>`
+export const InputLabel = styled.label`
   display: flex;
   flex-direction: column;
   color: ${colorTokens.neutral.black};

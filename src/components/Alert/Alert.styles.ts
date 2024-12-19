@@ -1,25 +1,20 @@
-import styled, { css, FlattenSimpleInterpolation } from "styled-components";
+import styled, { css } from "styled-components";
 import { colorTokens, spacingTokens } from "@styles/theme/tokens";
-import { disabledStyles, fontFamilyStyles } from "@styles/mixins";
+import { fontFamilyStyles } from "@styles/mixins";
 import { AlertProps } from "./Alert";
-
-export type AlertStyles = FlattenSimpleInterpolation;
 
 export const StyledAlert = styled.div<AlertProps>`
   background-color: ${colorTokens.primary.blue.main};
   border-radius: ${spacingTokens.borderRadius.md};
   font-size: ${spacingTokens.fontSizes.sm};
-  padding: ${spacingTokens.spacing.md};
   margin-bottom: ${spacingTokens.spacing.md};
-
-  &:disabled {
-    ${disabledStyles}
-  }
+  padding: ${spacingTokens.spacing.md};
 
   ${({ variant }) =>
     variant === "info"
       ? css`
           background-color: ${colorTokens.primary.blue.main};
+          color: ${colorTokens.neutral.white};
         `
       : variant === "warning"
         ? css`
@@ -32,6 +27,7 @@ export const StyledAlert = styled.div<AlertProps>`
           : variant === "error"
             ? css`
           background-color: ${colorTokens.error.main};
+          color: ${colorTokens.neutral.white};
         `
             : css`
           background-color: transparent;
@@ -47,6 +43,16 @@ export const AlertHeader = styled.header<AlertProps>`
   font-size: ${spacingTokens.fontSizes.md};
   font-weight: bold;
   margin-bottom: ${spacingTokens.spacing.sm};
+  ${({ variant }) =>
+    variant === "info" || variant === "error"
+      ? css`
+          color: ${colorTokens.neutral.white};
+        `
+      : css`
+          background-color: transparent;
+        `}
+  ${fontFamilyStyles}
+
 `;
 
 export const AlertIcon = styled.div`

@@ -1,0 +1,63 @@
+import { Meta } from '@storybook/blocks';
+import Logo from '../assets/images/logos/rodbit_logo_color.svg';
+
+<Meta title="Introduction" />
+
+<div style={{ textAlign: 'center' }}>
+  <img src={Logo} alt="Rodbit Logo" width={400} />
+# Design Language System
+</div>
+
+Welcome to the Rodbit Design Language System documentation. This design system provides a collection of reusable components, design tokens, and guidelines to help create consistent user interfaces.
+
+## Getting Started
+
+Install the package:
+
+```bash
+npm install @rodbit/design-system
+```
+
+## Usage
+
+```tsx
+import { Button } from '@rodbit/design-system';
+
+function App() {
+  return (
+    <Button color="primary" variant="filled">
+      Click me
+    </Button>
+  );
+}
+```
+
+## Core Concepts
+
+### Color System
+
+**Our color system is built around semantic use cases:**
+
+- Primary: Main brand colors (Blue & Red variants)
+- Success: Positive actions and success states
+- Error: Error states and destructive actions
+- Warning: Cautionary actions and states
+- Info: Informational and neutral actions
+- Neutral: Grayscale colors for text, backgrounds, and borders
+
+### Design Tokens
+
+```tsx
+  // Colors
+  colorTokens.primary.blue.main  // "#0288B0"
+  colorTokens.success.main      // "#179E44"
+  colorTokens.neutral.white     // "#FAFCFC"
+
+  // Spacing
+  spacingTokens.spacing.md      // "16px"
+  spacingTokens.borderRadius.sm // "8px"
+
+  // Typography
+  fontFamilyTokens.body         // "Roboto, sans-serif"
+  spacingTokens.fontSizes.md    // "16px"
+```

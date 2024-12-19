@@ -1,15 +1,6 @@
 import "./App.css";
-import Button from "./components/Atoms/Button/Button";
-import Checkbox from "./components/Atoms/Checkbox/Checkbox";
-import Radio from "./components/Atoms/Radio/Radio";
-import Select from "./components/Atoms/Select/Select";
-import Toggle from "./components/Atoms/Toggle/Toggle";
-import Tabs from "./components/Atoms/Tab/Tabs";
-import Textarea from "./components/Atoms/Textarea/Textarea";
-import Alert from "./components/Atoms/Alert/Alert";
-import Badge from "./components/Atoms/Badge/Badge";
-import Input from "./components/Atoms/Input/Input";
-import Skeleton from "./components/Atoms/Skeleton/Skeleton";
+import { Button, Alert, Badge, Checkbox, Input, Radio, Toggle, Select, Skeleton, Tabs, Textarea } from "./components/";
+
 
 function App() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledRadio, RadioLabel } from "./Radio.styles";
 
-interface RadioProps {
+export interface RadioProps {
   label?: string;
   variant?: "filled" | "outline";
   checked?: boolean;

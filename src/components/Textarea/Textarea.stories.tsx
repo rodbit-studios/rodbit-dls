@@ -4,16 +4,7 @@ import Textarea from './Textarea';
 const meta: Meta<typeof Textarea> = {
   title: 'Components/Textarea',
   component: Textarea,
-  argTypes: {
-    label: { control: 'text' },
-    error: { control: 'text' },
-    helperText: { control: 'text' },
-    disabled: { control: 'boolean' },
-    fullWidth: { control: 'boolean' },
-    required: { control: 'boolean' },
-    startAdornment: { control: 'object' },
-    endAdornment: { control: 'object' },
-  },
+  argTypes: {},
   tags: ['autodocs'],
 };
 

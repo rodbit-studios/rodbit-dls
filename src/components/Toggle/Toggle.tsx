@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledToggle, ToggleLabel } from "./Toggle.styles";
 
-interface ToggleProps {
+export interface ToggleProps {
   label?: string;
   checked?: boolean;
   disabled?: boolean;

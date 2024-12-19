@@ -4,14 +4,7 @@ import Skeleton from './Skeleton';
 const meta: Meta<typeof Skeleton> = {
   title: 'Components/Skeleton',
   component: Skeleton,
-  argTypes: {
-    variant: {
-      control: { type: 'select', options: ['text', 'circular', 'rectangular'] },
-    },
-    animation: {
-      control: { type: 'select', options: ['pulse', 'wave', 'none'] },
-    },
-  },
+  argTypes: {},
   tags: ['autodocs'],
 };
 

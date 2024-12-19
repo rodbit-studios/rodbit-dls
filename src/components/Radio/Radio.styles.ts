@@ -1,13 +1,7 @@
-import styled, { FlattenSimpleInterpolation } from "styled-components";
+import styled from "styled-components";
 import { colorTokens, fontFamilyTokens, spacingTokens } from "@styles/theme/tokens";
 import { disabledStyles } from "@styles/mixins";
-
-interface RadioProps {
-  checked?: boolean;
-  disabled?: boolean
-}
-
-export type RadioStyles = FlattenSimpleInterpolation;
+import { RadioProps } from "./Radio";
 
 export const StyledRadio = styled.input.attrs({ type: "radio" }) <RadioProps>`
   width: ${spacingTokens.spacing.md};

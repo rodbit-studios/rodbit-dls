@@ -9,7 +9,7 @@ import {
   ModalFooter
 } from "./Modal.styles";
 
-interface ModalProps {
+export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title?: string;

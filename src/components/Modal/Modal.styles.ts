@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { colorTokens, spacingTokens } from "@styles/theme/tokens";
 import { fontFamilyStyles } from "@styles/mixins";
+import { ModalProps } from "./Modal";
 
-export const ModalOverlay = styled.div`
+export const ModalOverlay = styled.div<ModalProps>`
   position: fixed;
   top: 0;
   left: 0;
@@ -15,7 +16,7 @@ export const ModalOverlay = styled.div`
   z-index: 1000;
 `;
 
-export const ModalContainer = styled.div`
+export const ModalContainer = styled.div<ModalProps>`
   background-color: ${colorTokens.neutral.white};
   border-radius: ${spacingTokens.borderRadius.lg};
   width: 50%;
@@ -23,7 +24,7 @@ export const ModalContainer = styled.div`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
-export const ModalHeader = styled.div`
+export const ModalHeader = styled.div<ModalProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,12 +33,12 @@ export const ModalHeader = styled.div`
   ${fontFamilyStyles}
 `;
 
-export const ModalTitle = styled.h2`
+export const ModalTitle = styled.h2<ModalProps>`
   margin: 0;
   font-size: 1.25rem;
 `;
 
-export const ModalCloseButton = styled.button`
+export const ModalCloseButton = styled.button<ModalProps>`
   background: none;
   border: none;
   cursor: pointer;
@@ -49,12 +50,12 @@ export const ModalCloseButton = styled.button`
   }
 `;
 
-export const ModalContent = styled.div`
+export const ModalContent = styled.div<ModalProps>`
   padding: ${spacingTokens.spacing.md};
   ${fontFamilyStyles}
 `;
 
-export const ModalFooter = styled.div`
+export const ModalFooter = styled.div<ModalProps>`
   display: flex;
   justify-content: flex-end;
   padding: ${spacingTokens.spacing.md};

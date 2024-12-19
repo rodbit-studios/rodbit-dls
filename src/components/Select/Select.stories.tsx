@@ -4,17 +4,7 @@ import Select from "./Select";
 const meta: Meta<typeof Select> = {
   title: "Components/Select",
   component: Select,
-  argTypes: {
-    label: { control: "text" },
-    options: {
-      control: {
-        type: "object",
-      },
-    },
-    value: { control: "text" },
-    onChange: { action: "onChange" },
-    disabled: { control: "boolean" },
-  },
+  argTypes: {},
   tags: ["autodocs"],
 };
 

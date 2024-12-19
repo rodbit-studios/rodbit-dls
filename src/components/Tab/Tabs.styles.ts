@@ -1,18 +1,14 @@
 import styled from "styled-components";
 import { colorTokens, spacingTokens } from "@styles/theme/tokens";
 import { fontFamilyStyles } from "@styles/mixins";
-
-interface TabProps {
-  active?: boolean;
-  disabled?: boolean;
-}
+import { Tab } from "./Tabs";
 
 export const TabContainer = styled.div`
   display: flex;
   border-bottom: 1px solid ${colorTokens.neutral.gray};
 `;
 
-export const TabButton = styled.button<TabProps>`
+export const TabButton = styled.button<Tab>`
   padding: ${spacingTokens.spacing.sm} ${spacingTokens.spacing.md};
   border: none;
   background-color: transparent;

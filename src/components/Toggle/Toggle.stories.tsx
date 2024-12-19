@@ -4,12 +4,7 @@ import Toggle from "./Toggle";
 const meta: Meta<typeof Toggle> = {
   title: "Components/Toggle",
   component: Toggle,
-  argTypes: {
-    label: { control: "text" },
-    checked: { control: "boolean" },
-    disabled: { control: "boolean" },
-    onChange: { action: "onChange" },
-  },
+  argTypes: {},
   tags: ["autodocs"],
 };
 

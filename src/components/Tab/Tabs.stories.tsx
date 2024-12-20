@@ -1,3 +1,4 @@
+import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import Tabs from "./Tabs";
 import { FaHouse, FaUser, FaCartShopping } from 'react-icons/fa6';

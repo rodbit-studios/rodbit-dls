@@ -1,5 +1,7 @@
+import React, { useState } from "react";
 import "./App.css";
 import { Button, Alert, Badge, Checkbox, Input, Radio, Toggle, Select, Skeleton, Tabs, Textarea } from "./components/";
+import { IoInformationCircle } from "react-icons/io5";
 
 
 function App() {
@@ -12,11 +14,11 @@ function App() {
           <Button variant="outline">Exit</Button>
         </div>
         <div className="alert-list">
-          <Alert title="Alert" body="This is an alert" />
+          <Alert title="Alert" body="This is an alert" variant="info" icon={<IoInformationCircle />} />
         </div>
         <div className="spacing-list">
-          <Badge label="Badge" />
-          <Badge label="Badge" variant="outline" />
+          <Badge label="Badge" variant="info" />
+          <Badge label="Badge" variant="error" />
         </div>
         <div className="spacing-list">
           <Checkbox label="Checkbox 1" />

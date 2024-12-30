@@ -1,8 +1,6 @@
-import React, { useState } from "react";
 import "./App.css";
 import { Button, Alert, Badge, Checkbox, Input, Radio, Toggle, Select, Skeleton, Tabs, Textarea } from "./components/";
 import { IoInformationCircle } from "react-icons/io5";
-
 
 function App() {
   return (
